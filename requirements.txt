@@ -1,0 +1,76 @@
+# Copyright (C) 2026 Boris Shkylnikov
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# This file is part of Vox Bee.
+#
+# Vox Bee is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
+#
+# Vox Bee is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Vox Bee. If not, see <https://www.gnu.org/licenses/>.
+# =============================================================================
+# Vox Bee — Dependencies (tested on Python 3.11–3.13, Windows 10/11)
+# =============================================================================
+
+# Core functionality: audio capture, mouse/keyboard control, Windows integration
+pynput==1.8.1                # Keyboard/mouse event monitoring & simulation
+sounddevice==0.5.5           # Real-time audio recording from microphone
+numpy==2.4.2                 # Numerical operations (used by sounddevice, noisereduce)
+pywin32==311                 # Windows API access (windows, clipboard, tray icon)
+
+# Clipboard & text paste (critical for "voice-to-text → paste" workflow)
+pyperclip==1.11.0            # Cross-platform clipboard access
+PyAutoGUI==0.9.54            # Window focus, screenshot, mouse positioning
+MouseInfo==0.1.3             # Required by PyAutoGUI (window info)
+PyGetWindow==0.0.9           # Required by PyAutoGUI (window enumeration)
+PyScreeze==1.0.1             # Required by PyAutoGUI (screenshot)
+PyRect==0.2.0                # Required by PyAutoGUI (rectangle operations)
+PyMsgBox==2.0.1              # Required by PyAutoGUI (message boxes)
+pytweening==1.2.0            # Required by PyAutoGUI (animation easing)
+uiautomation==2.0.29         # Reliable window detection on Windows
+
+# System tray icon & GUI
+pystray==0.19.5              # System tray icon with context menu
+Pillow==12.1.1               # Image processing (for icon rendering)
+
+# Voice Activity Detection (VAD) — detects speech start/end
+webrtcvad-wheels==2.0.14     # Optimized VAD for Windows (no build required)
+
+# Noise reduction (background noise suppression)
+noisereduce==3.0.3           # Spectral gating noise reduction
+scipy==1.17.0                # Required by noisereduce (FFT, signal processing)
+joblib==1.5.3                # Required by noisereduce (parallel processing)
+tqdm==4.67.3                 # Required by noisereduce (progress bars)
+
+# HTTP requests (for API calls, e.g. speech-to-text services)
+requests==2.32.5             # HTTP library for API communication
+certifi==2026.1.4            # Required by requests (SSL certificates)
+charset-normalizer==3.4.4    # Required by requests (encoding detection)
+idna==3.11                   # Required by requests (domain names)
+urllib3==2.6.3               # Required by requests (HTTP engine)
+
+# Data visualization (debug / audio waveform plots)
+matplotlib==3.10.8           # Plotting library (optional, for debugging audio)
+contourpy==1.3.3             # Required by matplotlib (contour plots)
+cycler==0.12.1               # Required by matplotlib (color cycling)
+fonttools==4.61.1            # Required by matplotlib (font handling)
+kiwisolver==1.4.9            # Required by matplotlib (layout solver)
+pyparsing==3.3.2             # Required by matplotlib (parsing)
+python-dateutil==2.9.0.post0 # Required by matplotlib (date formatting)
+packaging==26.0              # Required by matplotlib (version parsing)
+six==1.17.0                  # Required by python-dateutil (Python 2/3 compat)
+
+# Windows-specific
+colorama==0.4.6              # Colored terminal output on Windows
+comtypes==1.4.15             # Required by uiautomation (COM interface)
+cffi==2.0.0                  # Required by pynput (C bindings)
+pycparser==3.0               # Required by cffi (C parser)
+
+# Build tools (for creating .exe distribution)
+pyinstaller==6.19.0          # Packaging Python app into standalone .exe

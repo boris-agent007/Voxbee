@@ -1,0 +1,81 @@
+# Copyright (C) 2026 Boris Shkylnikov
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# This file is part of Vox Bee.
+#
+# Vox Bee is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
+#
+# Vox Bee is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Vox Bee. If not, see <https://www.gnu.org/licenses/>.
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env/
+.env.local
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build and dist
+build/
+dist/
+scripts/
+*.egg-info/
+
+# Logs and temp
+*.log
+*.tmp
+whisper_tmp/
+@AutomationLog.txt
+
+# Binaries and archives
+bin/
+*.zip
+*.exe
+*.dll
+
+# OS generated
+Thumbs.db
+.DS_Store
+
+# Models (большие файлы, скачиваются отдельно)
+models/
+
+project_export/collect_files.py
+project_export/tree.py
+src/temp_audio_vad.wav
+src/temp_audio_vad.wav
+/_json для exe
+
+
+# Dev-конфиг (создаётся при запуске)
+config.json
+
+# Рабочие копии (генерируются из шаблонов в src/)
+commands.json
+aliases.json
+user_dictionary.json
+scripts.json
+
+# Сборка установщика
+installer_output/
+
+VC_redist.x64.exe
+
+# Артефакты
+$null

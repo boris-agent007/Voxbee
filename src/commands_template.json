@@ -1,0 +1,394 @@
+{
+    "_comment": "Multilingual voice commands template",
+    "_comment2": "triggers can be legacy list or multilingual object: {common:[...], ru:[...], en:[...]}",
+    "_comment3": "type: paste/hotkey/mouse_move/mouse_click/mouse_monitor/grid/grid_zoom/mouse_continuous/mouse_stop/focus_switch/focus_save/mouse_scroll/mouse_scroll_max",
+    "_comment4": "Reload commands through tray after editing",
+    "_comment5": "Grid example: 'сетка 15' / 'grid 15', 'уточни 7' / 'refine 7'",
+
+    "paste_venv": {
+        "triggers": {
+            "ru": ["включи окружение"],
+            "en": ["activate environment"]
+        },
+        "type": "paste",
+        "value": "venv\\Scripts\\activate"
+    },
+     "run_programm": {
+        "triggers": {
+            "ru": ["запусти программу"],
+            "en": ["activate environment"]
+        },
+        "type": "paste",
+        "value": "source venv/Scripts/activate && python src/main.py"  
+
+    },
+    "paste_git_status": {
+        "triggers": {
+            "ru": ["гит статус", "гид статус"],
+            "en": ["git status"]
+        },
+        "type": "paste",
+        "value": "git status"
+    },
+    "paste_git_push": {
+        "triggers": {
+            "ru": ["гит пуш" , "git push" , "гид пуш"],
+            "en": ["git push"]
+        },
+        "type": "paste",
+        "value": "git push"
+    },
+
+    "hotkey_save": {
+        "triggers": {
+            "ru": ["сохрани", "сохранить"],
+            "en": ["save"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+s"
+    },
+    "hotkey_undo": {
+        "triggers": {
+            "ru": ["отмени", "отменить"],
+            "en": ["undo"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+z"
+    },
+    "hotkey_redo": {
+        "triggers": {
+            "ru": ["повтори"],
+            "en": ["redo"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+y"
+    },
+    "hotkey_clear": {
+        "triggers": {
+            "ru": ["очисти", "очистить", "сделай красиво"],
+            "en": ["clear", "make it pretty"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+l"
+    },
+    "hotkey_kill_line": {
+        "triggers": {
+            "ru": ["удали строку", "сотри строку", "убери строку", "убери набранное", "удали набранное"],
+            "en": ["delete line", "remove line"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+u"
+    },
+    "hotkey_copy": {
+        "triggers": {
+            "ru": ["копировать", "скопируй", "копируй"],
+            "en": ["copy"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+c"
+    },
+    "hotkey_paste": {
+        "triggers": {
+            "ru": ["вставить", "вставь"],
+            "en": ["paste"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+v"
+    },
+    "hotkey_enter": {
+        "triggers": {
+            "ru": ["энтер", "ентер", "ввод", "ок", "окей", "отправить", "отправь"],
+            "en": ["enter", "send", "submit"]
+        },
+        "type": "hotkey",
+        "value": "enter"
+    },
+    "hotkey_tab": {
+        "triggers": {
+            "ru": ["таб"],
+            "en": ["tab"]
+        },
+        "type": "hotkey",
+        "value": "tab"
+    },
+    "hotkey_backspace": {
+        "triggers": {
+            "ru": ["бэкспейс", "удали", "удалить"],
+            "en": ["backspace", "delete"]
+        },
+        "type": "hotkey",
+        "value": "backspace"
+    },
+    "hotkey_cut": {
+        "triggers": {
+            "ru": ["вырезать", "вырежь"],
+            "en": ["cut"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+x"
+    },
+    "hotkey_select_all": {
+        "triggers": {
+            "ru": ["выделить всё", "выдели все"],
+            "en": ["select all"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+a"
+    },
+    "hotkey_select_to_start": {
+        "triggers": {
+            "ru": ["выдели до начала", "выделить до начала"],
+            "en": ["select to start"]
+        },
+        "type": "hotkey",
+        "value": "shift+home"
+    },
+    "hotkey_select_to_end": {
+        "triggers": {
+            "ru": ["выдели до конца", "выделить до конца", "выдели строку", "выделить строку"],
+            "en": ["select to end", "select line"]
+        },
+        "type": "hotkey",
+        "value": "shift+end"
+    },
+    "hotkey_select_word_left": {
+        "triggers": {
+            "ru": ["выдели слева", "выделить слева", "слово слева"],
+            "en": ["select left word"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+shift+left"
+    },
+    "hotkey_select_word_right": {
+        "triggers": {
+            "ru": ["выдели справа", "выделить справа", "слово справа"],
+            "en": ["select right word"]
+        },
+        "type": "hotkey",
+        "value": "ctrl+shift+right"
+    },
+
+    "mouse_scroll_up": {
+        "triggers": {
+            "ru": ["скролл вверх", "прокрути вверх", "листай вверх"],
+            "en": ["scroll up"]
+        },
+        "type": "mouse_scroll",
+        "value": "up"
+    },
+    "mouse_scroll_down": {
+        "triggers": {
+            "ru": ["скролл вниз", "прокрути вниз", "листай вниз", "страница вниз"],
+            "en": ["scroll down", "page down"]
+        },
+        "type": "mouse_scroll",
+        "value": "down"
+    },
+    "scroll_to_bottom": {
+        "triggers": {
+            "ru": ["в конец страницы", "в самый низ"],
+            "en": ["to bottom", "scroll to bottom"]
+        },
+        "type": "mouse_scroll_max",
+        "value": "down"
+    },
+    "scroll_to_top": {
+        "triggers": {
+            "ru": ["в начало страницы", "в самый верх"],
+            "en": ["to top", "scroll to top"]
+        },
+        "type": "mouse_scroll_max",
+        "value": "up"
+    },
+
+
+    "mouse_right": {
+        "triggers": {
+            "ru": ["правее", "вправо"],
+            "en": ["right", "move right"]
+        },
+        "type": "mouse_move",
+        "value": "right"
+    },
+    "mouse_left": {
+        "triggers": {
+            "ru": ["левее", "влево"],
+            "en": ["left", "move left"]
+        },
+        "type": "mouse_move",
+        "value": "left"
+    },
+    "mouse_up": {
+        "triggers": {
+            "ru": ["выше", "вверх"],
+            "en": ["up", "move up"]
+        },
+        "type": "mouse_move",
+        "value": "up"
+    },
+    "mouse_down": {
+        "triggers": {
+            "ru": ["ниже", "вниз"],
+            "en": ["down", "move down"]
+        },
+        "type": "mouse_move",
+        "value": "down"
+    },
+
+    "mouse_click_left": {
+        "triggers": {
+            "ru": ["кликни", "клик", "нажми"],
+            "en": ["click", "press"]
+        },
+        "type": "mouse_click",
+        "value": "left"
+    },
+    "mouse_click_right": {
+        "triggers": {
+            "ru": ["правый клик"],
+            "en": ["right click"]
+        },
+        "type": "mouse_click",
+        "value": "right"
+    },
+    "mouse_click_double": {
+        "triggers": {
+            "ru": ["двойной клик", "даблклик", "открой", "открыть"],
+            "en": ["double click", "open"]
+        },
+        "type": "mouse_click",
+        "value": "double"
+    },
+
+    "mouse_monitor_1": {
+        "triggers": {
+            "ru": ["монитор 1", "первый монитор", "монитор один" ],
+            "en": ["monitor 1", "first monitor", "monitor one"]
+        },
+        "type": "mouse_monitor",
+        "value": "1"
+    },
+    "mouse_monitor_2": {
+        "triggers": {
+            "ru": ["монитор 2", "второй монитор", "монитор два"],
+            "en": ["monitor 2", "second monitor", "monitor two"]
+        },
+        "type": "mouse_monitor",
+        "value": "2"
+    },
+    "mouse_monitor_3": {
+        "triggers": {
+            "ru": ["монитор 3", "третий монитор","монитор три"],
+            "en": ["monitor 3", "third monitor", "monitor three"]
+        },
+        "type": "mouse_monitor",
+        "value": "3"
+    },
+
+    "grid_go": {
+        "triggers": {
+            "ru": ["сетка", "сектор", "ячейка", "точка"],
+            "en": ["grid", "cell", "point"]
+        },
+        "type": "grid",
+        "value": ""
+    },
+    "grid_zoom": {
+        "triggers": {
+            "ru": ["уточни", "зум", "точнее"],
+            "en": ["refine", "zoom", "more precise"]
+        },
+        "type": "grid_zoom",
+        "value": ""
+    },
+
+    "mouse_continuous_right": {
+        "triggers": {
+            "ru": ["двигай вправо"],
+            "en": ["move continuously right", "keep moving right"]
+        },
+        "type": "mouse_continuous",
+        "value": "right"
+    },
+    "mouse_continuous_left": {
+        "triggers": {
+            "ru": ["двигай влево"],
+            "en": ["move continuously left", "keep moving left"]
+        },
+        "type": "mouse_continuous",
+        "value": "left"
+    },
+    "mouse_continuous_up": {
+        "triggers": {
+            "ru": ["двигай вверх"],
+            "en": ["move continuously up", "keep moving up"]
+        },
+        "type": "mouse_continuous",
+        "value": "up"
+    },
+    "mouse_continuous_down": {
+        "triggers": {
+            "ru": ["двигай вниз"],
+            "en": ["move continuously down", "keep moving down"]
+        },
+        "type": "mouse_continuous",
+        "value": "down"
+    },
+    "mouse_stop": {
+        "triggers": {
+            "ru": ["стоп"],
+            "en": ["stop"]
+        },
+        "type": "mouse_stop",
+        "value": ""
+    },
+
+    "focus_switch": {
+        "triggers": {
+            "ru": ["фокус", "переключись"],
+            "en": ["focus", "switch focus"]
+        },
+        "type": "focus_switch",
+        "value": ""
+    },
+    "focus_save": {
+        "triggers": {
+            "ru": ["запомни точку", "сохрани точку", "запомни фокус"],
+            "en": ["save point", "remember point", "save focus"]
+        },
+        "type": "focus_save",
+        "value": ""
+    },
+    "selection_more": {
+        "triggers": {
+            "ru": ["больше", "ещё", "еще"],
+            "en": ["more", "expand"]
+        },
+        "type": "selection_more",
+        "value": ""
+    },
+    "selection_less": {
+        "triggers": {
+            "ru": ["меньше", "поменьше"],
+            "en": ["less", "shrink"]
+        },
+        "type": "selection_less",
+        "value": ""
+    }    ,
+    "math_mode_on": {
+        "triggers": {
+            "ru": ["включи математику", "включить математику", "режим математики"],
+            "en": ["math mode on", "enable math mode"]
+        },
+        "type": "toggle_math_mode",
+        "value": "on"
+    },
+    "math_mode_off": {
+        "triggers": {
+            "ru": ["выключи математику", "выключить математику", "отключи математику"],
+            "en": ["math mode off", "disable math mode"]
+        },
+        "type": "toggle_math_mode",
+        "value": "off"
+    }
+}
